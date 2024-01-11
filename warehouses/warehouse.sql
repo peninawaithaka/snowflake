@@ -11,3 +11,24 @@ comment = 'this is virtual warehouse of size x-small that can be used to process
 
 -- deleting warehouses
 drop warehouse compute_warehouse
+
+
+--creating a database and a table
+create database shopit
+create table if not exists customers(
+    id int,
+    first_name varchar,
+    last_name varchar,
+    email varchar,
+    age int,
+    city varchar
+)
+
+-- loading data from s3 - public bucket
+copy into customers
+from s3://snowflake-assignments-mc/gettingstarted/customers.csv
+file_format = (
+    type = csv,
+    field_delimiter = ',',
+    skip_header=1
+);
