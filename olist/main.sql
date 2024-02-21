@@ -190,14 +190,6 @@ FILE_FORMAT = (type = 'CSV' skip_header = 1 )
 on_error = 'continue';
 
 
-info loading_data
-
-
-
-
-
-
-
 select 
     replace(customer_id, '"', ''),
     customer_unique_id,
