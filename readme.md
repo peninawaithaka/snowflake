@@ -1,4 +1,4 @@
-### SNOWFLAKE
+### SNOWFLAKE 
 
 
     Using role accountadmin, create and drop a warehouse in snowflake
